@@ -37,6 +37,8 @@ class Product(BaseModel):
     price: float = Field(..., ge=0, description="Price in dollars")
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
+    image_url: Optional[str] = Field(None, description="Primary image URL")
+    rating: Optional[float] = Field(4.5, ge=0, le=5, description="Average rating 0-5")
 
 # Add your own schemas here:
 # --------------------------------------------------
